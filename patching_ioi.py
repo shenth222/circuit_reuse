@@ -23,6 +23,7 @@ from torch.utils.data import DataLoader, Dataset
 from easy_transformer.ioi_dataset import (
     IOIDataset,
 )
+from patch_tf_lens import patch_transformer_lens
 
 
 def imshow(tensor, renderer=None, midpoint=0, **kwargs):
@@ -61,6 +62,7 @@ def load_json(filename):
     
 if __name__ == '__main__':
 
+    patch_transformer_lens()
     #load config
     cfg_fname = sys.argv[1]
     cfg = load_json(cfg_fname)
@@ -78,6 +80,8 @@ if __name__ == '__main__':
         fold_ln=True,
         device = device
     )
+
+    exit()
     
     N=1000
     batch_size = 25

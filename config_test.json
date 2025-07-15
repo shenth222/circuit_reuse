@@ -1,0 +1,8 @@
+{
+    "model_name": "/data/shenth/models/llama/2-7b-hf",
+    "component": "z",
+    "position": "a",
+    "freeze_mlps": "true",
+    "indirect_patch": "111",
+    "receiver_nodes": "qweqwe"
+}
